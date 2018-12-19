@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        .argumentTable {
+            width: 100%;
+            height: 100%;
+        }
+
+        .textAreaWrapper {
+            width: 30em;
+            height: 30em;
+        }
+
+        textarea {
+            width: 80%;
+            height: 95%;
+        }
+
+        .visited {
+            background-color: #90ff8e;
+        }
+
+        .unvisited {
+            background-color: #ff6666;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="flex-container">
+    <div>
+        <div>
+            <label><h3>Enter code here</h3></label>
+            <div class="textAreaWrapper">
+                <textarea id="codePlaceholder" title="Enter code here"></textarea>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <label><h3>Parsed code here</h3></label>
+            <div class="textAreaWrapper">
+                <div id="substitutionResult"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <button id="codeSubmissionButton">Parse code</button>
+</div>
+<br>
+<hr>
+<br>
+<table class='argumentTable'>
+    <tr>
+        <td><h3>Arguments Adder Section:</h3></td>
+    </tr>
+    <tr>
+        <table id="newArgumentTable">
+            <tr class='newArgCells'>
+                <td>
+                    <label>Var Name: <input id="varName" type="text"></label>
+                </td>
+                <td>
+                    <label>Var Value: <input id="varValue" type="text"></label>
+                </td>
+            </tr>
+        </table>
+    </tr>
+    <tr>
+        <button id="newArgumentBtn">Add argument</button>
+    </tr>
+</table>
+<script src="dist/bundle.js"></script>
+</body>
+</html>
